@@ -1,0 +1,11 @@
+<launch>
+    <rosparam command="load" file="$(find pixel_pointcloud)/config/params.yaml" />
+
+    <node pkg="tf" type="static_transform_publisher" name="sensor_to_map" args="0 0 1 0 0 0 map sensor 100" />
+
+    <node pkg="pixel_pointcloud" type="pixel_pointcloud_node" name="pixel_cloud_fusion" output="screen"/>
+      
+    <node pkg="rviz" type="rviz" name="rviz" args="-d /home/wjq/workspace/camera_point_fusion/src/pixel_pointcloud/config/rviz.rviz" output="screen" />
+
+    <param name="/use_sim_time" value="true" />
+</launch>

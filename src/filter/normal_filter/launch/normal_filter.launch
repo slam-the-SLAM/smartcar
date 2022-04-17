@@ -1,0 +1,7 @@
+<launch>
+    <rosparam command="load" file="$(find normal_filter)/config/params.yaml" />
+
+    <node pkg="normal_filter" type="normal_filter_node" name="normal_filter" output="screen"/>
+
+    <node pkg="rviz" type="rviz" name="rviz" args="-d /home/wjq/workspace/smartcar_ws/src/filter/normal_filter/config/rviz.rviz" output="screen" />
+</launch>

@@ -1,0 +1,15 @@
+normal_filter:
+  search_radius: 0.5
+  thershold_min: 0 
+  thershold_max: 20 
+  height: 1.55
+  normal_v: [ 0.0237744, -0.0141324, 0.999617]
+
+  cloud_input: "/livox/lidar"
+  cloud_crop: "/cloud_crop"
+  
+  cloud_theta: "/cloud_theta"
+  cloud_curvature: "/cloud_curvature"
+  cloud_ground: "/cloud_ground"
+  cloud_no_ground: "/cloud_no_ground"
+  cloud_transform: "/cloud_transform"

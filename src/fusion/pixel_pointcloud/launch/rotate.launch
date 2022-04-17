@@ -1,0 +1,14 @@
+<launch>
+
+    <!-- <node name="rosbag_play" pkg="rosbag" type="play" args="-d 2 /home/wjq/data/datasets/2021-12-28-15-37-15.bag"/> -->
+    <!-- <node name="rosbag_record" pkg="rosbag" type="record" args="/points_raw"/> -->
+    <!-- <node name="rosbag_play" pkg="rosbag" type="play" args="-d 2 /home/wjq/data/datasets/mapping.bag"/> -->
+    
+    <!-- <node name="rosbag" pkg="rosbag" type="play" args="-d 2 /home/wjq/data/datasets/2021-12-28-15-28-03.bag"/>
+    <node name="rosbag" pkg="rosbag" type="record" args="-O /home/wjq/data/datasets/location.bag"/> -->
+
+    <node pkg="pixel_pointcloud" type="pointcloud_rotate_node" name="pointcloud_rotate" output="screen"/>
+
+    <node pkg="rviz" type="rviz" name="rviz" args="-d /home/wjq/workspace/camera_point_fusion/src/pixel_pointcloud/config/rotate.rviz" output="screen" />
+
+</launch>
